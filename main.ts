@@ -1,7 +1,4 @@
-scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.doorLockedNorth, function (sprite, location) {
-    game.over(false)
-})
-let mySprite = sprites.create(img`
+let player1 = sprites.create(img`
     ................................
     ................................
     ................................
@@ -53,8 +50,8 @@ tiles.setTilemap(tiles.createTilemap(hex`100010000604010104040504040406060606040
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
     `, [myTiles.transparency16,sprites.dungeon.doorLockedNorth,sprites.dungeon.floorLight0,sprites.dungeon.floorLight1,myTiles.tile1,myTiles.tile2,myTiles.tile3,sprites.dungeon.doorOpenEast], TileScale.Sixteen))
-scene.cameraFollowSprite(mySprite)
-tiles.placeOnRandomTile(mySprite, sprites.dungeon.doorOpenEast)
-info.changeScoreBy(1e+169)
-controller.moveSprite(mySprite)
+scene.cameraFollowSprite(player1)
+tiles.placeOnRandomTile(player1, sprites.dungeon.doorOpenEast)
+info.changeScoreBy(4)
+controller.moveSprite(player1)
 music.playMelody("- - - - - - - - ", 120)

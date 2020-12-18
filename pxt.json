@@ -3,7 +3,9 @@
     "description": "",
     "dependencies": {
         "device": "*",
-        "keyboard": "*"
+        "keyboard": "*",
+        "MiniuteMaze": "github:finlayhenderson/miniutemaze#master",
+        "Color Fading": "github:jwunderl/pxt-color#v0.2.0"
     },
     "files": [
         "main.blocks",
